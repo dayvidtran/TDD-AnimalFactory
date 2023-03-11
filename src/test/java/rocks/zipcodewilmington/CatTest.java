@@ -11,9 +11,9 @@ import java.util.Date;
  */
 public class CatTest {
     // TODO - Create tests for `void setName(String name)` done
-    // TODO - Create tests for `speak`
+    // TODO - Create tests for `speak` done
     // TODO - Create tests for `setBirthDate(Date birthDate)` done
-    // TODO - Create tests for `void eat(Food food)`
+    // TODO - Create tests for `void eat(Food food)` done
     // TODO - Create tests for `Integer getId()` done
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
@@ -65,6 +65,21 @@ public class CatTest {
         int actual = cat.getId();
         Assert.assertEquals(expected, actual);
 
+    }
+    @Test
+    public void catSpeakTest(){
+        Cat cat = new Cat(null,null,null);
+        String expected = "meow!";
+        String actual = cat.speak();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void catEatTest(){
+        Cat cat = new Cat(null,null,null);
+        String expected = "tuna";
+        String actual = cat.eat();
+        Assert.assertEquals(expected, actual);
     }
 }
 

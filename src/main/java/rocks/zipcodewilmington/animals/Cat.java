@@ -15,5 +15,8 @@ public class Cat extends Mammal {
         return "meow!";
     }
 
+    public String eat() {
+        return null;
     }
+}
 
