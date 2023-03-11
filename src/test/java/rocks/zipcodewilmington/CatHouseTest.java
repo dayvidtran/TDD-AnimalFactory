@@ -24,6 +24,7 @@ public class CatHouseTest {
         int expected = 1;
         int actual = CatHouse.getNumberOfCats();
         Assert.assertEquals(expected, actual);
+        CatHouse.clear();
     }
 
     //    @Test

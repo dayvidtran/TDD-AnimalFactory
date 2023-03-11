@@ -70,8 +70,9 @@ public class DogTest {
     @Test
     public void dogEatTest(){
         Dog dog = new Dog(null,null,null);
-        String expected = "kibbles";
-        String actual = dog.eat();
+        dog.eat(new Food());
+        int expected = 1;
+        int actual = dog.getNumberOfMealsEaten();
         Assert.assertEquals(expected, actual);
     }
 }
