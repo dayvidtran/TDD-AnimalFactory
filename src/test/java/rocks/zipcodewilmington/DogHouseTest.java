@@ -15,7 +15,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     // TODO - Create tests for `void remove(Dog dog)`
     // TODO - Create tests for `Dog getDogById(Integer id)`
-    // TODO - Create tests for `Integer getNumberOfDogs()`
+    // TODO - Create tests for `Integer getNumberOfDogs()`done
 
     @Test
     public void testGetNumberOfDogs() {

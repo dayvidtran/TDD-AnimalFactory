@@ -25,8 +25,17 @@ public class AnimalFactoryTest {
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedBirthDate, actualBirthDate);
 
+    }
 
-
+    @Test
+    public void dogCreationTest(){
+        String expectedName = "milo";
+        Date expectedBirthDate = new Date(12/22/2020);
+        Dog dog1 = AnimalFactory.createDog(expectedName, expectedBirthDate);
+        String actualName = dog1.getName();
+        Date actualBirthDate = dog1.getBirthDate();
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedBirthDate, actualBirthDate);
     }
 
 }
