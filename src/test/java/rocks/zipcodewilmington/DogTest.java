@@ -51,7 +51,7 @@ public class DogTest {
 
     @Test
     public void getDogBirthDate() {
-        Dog dog1 = new Dog(null, null, null);
+        Dog dog1 = new Dog(null, new Date(12/22/2020), null);
         Date expected = new Date(12 / 22 / 2020);
         Date actual = dog1.getBirthDate();
         Assert.assertEquals(expected, actual);
@@ -60,8 +60,8 @@ public class DogTest {
 
     @Test
     public void getDogIdTest() {
-        Dog dog = new Dog(null, null, null);
-        int expected = 0;
+        Dog dog = new Dog(null, null, 88);
+        int expected = 88;
         int actual = dog.getId();
         Assert.assertEquals(expected, actual);
 

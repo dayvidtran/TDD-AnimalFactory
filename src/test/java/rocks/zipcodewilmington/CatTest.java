@@ -51,7 +51,7 @@ public class CatTest {
 
     @Test
     public void setCatBirthDate() {
-        Cat cat = new Cat(null, null, null);
+        Cat cat = new Cat(null, new Date(12/23/2020), null);
         Date expected = new Date(12 / 23 / 2020);
         Date actual = cat.getBirthDate();
         Assert.assertEquals(expected, actual);

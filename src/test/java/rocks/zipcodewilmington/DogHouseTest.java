@@ -56,7 +56,7 @@ public class DogHouseTest {
 
     @Test
     public void removeDogByIdTest(){
-        Dog dog = new Dog(null,null,4);
+        Dog dog = new Dog(null,null,54);
         DogHouse.add(dog);
         Dog expected = dog;
         Dog actual =DogHouse.getDogById(54);
