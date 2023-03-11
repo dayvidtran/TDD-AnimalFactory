@@ -60,8 +60,8 @@ public class CatTest {
 
     @Test
     public void getCatIdTest() {
-        Cat cat = new Cat(null, null, null);
-        int expected = 0;
+        Cat cat = new Cat(null, null, 54);
+        int expected = 54;
         int actual = cat.getId();
         Assert.assertEquals(expected, actual);
 

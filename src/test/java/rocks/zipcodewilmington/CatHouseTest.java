@@ -14,7 +14,7 @@ public class CatHouseTest {
     // TODO - Create tests for `void add(Cat cat)` done
     // TODO - Create tests for `void remove(Integer id)`
     // TODO - Create tests for `void remove(Cat cat)` done
-    // TODO - Create tests for `Cat getCatById(Integer id)`
+    // TODO - Create tests for `Cat getCatById(Integer id)`done
     // TODO - Create tests for `Integer getNumberOfCats()` done
 
     @Test
@@ -27,17 +27,9 @@ public class CatHouseTest {
         CatHouse.clear();
     }
 
-    //    @Test
-//    public static void removeCatById(){
-//        Cat cat3 = new Cat(null,null,1003);
-//        CatHouse.add(cat3);
-//        CatHouse.remove(1003);
-//        String expected =
-//        Assert.assertEquals(expected, actual);
-
     @Test
-    public void removeCatTest(){
-        Cat cat2 = AnimalFactory.createCat(null,null);
+    public void removeCatTest () {
+        Cat cat2 = AnimalFactory.createCat(null, null);
         CatHouse.add(cat2);
         CatHouse.remove(cat2);
         int expected = 0;
@@ -46,20 +38,20 @@ public class CatHouseTest {
 
     }
 
-//    @Test
-//    public void getCatById(){
-//        Cat cat1 = new Cat("meme", null, 54);
-//        CatHouse.add(cat1);
-//        int expected = 54;
-//        int actual = CatHouse.getCatById();
-//        Assert.assertEquals(expected, actual);
-//    }
-
+    @Test
+    public void getCatByIdTest () {
+        Cat cat1 = new Cat("meme", null, 54);
+        CatHouse.add(cat1);
+        Cat actual = CatHouse.getCatById(54);
+        Cat expected = cat1;
+        Assert.assertEquals(expected, actual);
+        CatHouse.clear();
+    }
 
 
     @Test
-    public void getNumberOfCatsTest(){
-        Cat cat1 = AnimalFactory.createCat(null,null);
+    public void getNumberOfCatsTest () {
+        Cat cat1 = AnimalFactory.createCat(null, null);
         CatHouse.add(cat1);
         int expected = 1;
         int actual = CatHouse.getNumberOfCats();
@@ -67,7 +59,6 @@ public class CatHouseTest {
     }
 
 
-
-
-
 }
+
+

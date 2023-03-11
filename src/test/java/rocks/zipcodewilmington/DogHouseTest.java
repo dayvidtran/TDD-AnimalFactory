@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
+import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
 import rocks.zipcodewilmington.animals.animal_storage.DogHouse;
 
 import java.util.Date;
@@ -13,7 +14,7 @@ import java.util.Date;
  */
 public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)` done
-    // TODO - Create tests for `void remove(Integer id)`
+    // TODO - Create tests for `void remove(Integer id)`done
     // TODO - Create tests for `void remove(Dog dog)` done
     // TODO - Create tests for `Dog getDogById(Integer id)`
     // TODO - Create tests for `Integer getNumberOfDogs()`done
@@ -35,7 +36,7 @@ public class DogHouseTest {
 
     @Test
     public void addDogTest(){
-        Dog dog = AnimalFactory.createDog(null,null);
+        Dog dog = new Dog(null, null,null);
         DogHouse.add(dog);
         int expected = 1;
         int actual = DogHouse.getNumberOfDogs();
@@ -51,5 +52,25 @@ public class DogHouseTest {
         int actual = DogHouse.getNumberOfDogs();
         Assert.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void removeDogByIdTest(){
+        Dog dog = new Dog(null,null,4);
+        DogHouse.add(dog);
+        Dog expected = dog;
+        Dog actual =DogHouse.getDogById(54);
+        Assert.assertEquals(expected, actual);
+        CatHouse.clear();
+
+    }
+
+    @Test
+    public void addDogByIdTest(){
+        Dog dog = new Dog(null,null,10);
+        DogHouse.add(dog);
+        Dog actual = DogHouse.getDogById(10);
+        Dog expected = dog;
+        Assert.assertEquals(expected, actual);
     }
 }
